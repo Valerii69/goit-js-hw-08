@@ -24,7 +24,7 @@ function galleryItemCreate(galleryItems) {
       .join("");
   }
   const items = galleryItemCreate(galleryItems); //створення посилання на строку з зображенням
-  console.log(galleryItemCreate(galleryItems)); //перевірка створення div з class="gallery__item"
+  // console.log(galleryItemCreate(galleryItems)); //перевірка створення div з class="gallery__item"
   
   //додаємо слоти з зображенням до розмітки
   
@@ -32,7 +32,7 @@ function galleryItemCreate(galleryItems) {
   
   gallery.insertAdjacentHTML("beforeend", items); // додаємо до HTML розмітки зображення
 
-  const lightbox = new SimpleLightbox(".gallery a", {
+  lightbox = new SimpleLightbox(".gallery a", {
 
     captionsData: "alt",
     animationSpeed: 250,

@@ -6,6 +6,7 @@ const feedBackFormState = 'feedback-form-state';
 let formValues = JSON.parse(localStorage.getItem(feedBackFormState));
 
 const { email, message } = form.elements;
+
 const saveInLocalStorage = throttle(event => {
   formValues = { email: email.value, message: message.value };
 
