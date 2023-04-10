@@ -6,10 +6,8 @@ const feedBackFormState = 'feedback-form-state';
 let formValues = JSON.parse(localStorage.getItem(feedBackFormState));
 
 const { email, message } = form.elements;
-
 const saveInLocalStorage = throttle(event => {
   formValues = { email: email.value, message: message.value };
-
   localStorage.setItem(feedBackFormState, JSON.stringify(formValues));
 }, 500);
 
@@ -20,13 +18,12 @@ if (formValues) {
 
 function onSubmit(evt) {
   evt.preventDefault();
-  localStorage.clear();
+  localStorage.removeItem(feedBackFormState);
 
   if (email.value === '' || message.value === '') {
     return;
   }
-
-  console.log(formValues);
+  //   console.log(formValues);
   evt.currentTarget.reset();
 }
 
