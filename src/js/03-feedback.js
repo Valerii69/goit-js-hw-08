@@ -18,12 +18,12 @@ if (formValues) {
 
 function onSubmit(evt) {
   evt.preventDefault();
-  localStorage.removeItem("feedBackFormState");
+  console.log(localStorage.removeItem(feedBackFormState));
 
   if (email.value === '' || message.value === '') {
     return;
   }
-  //   console.log(formValues);
+  // console.log(formValues);
   evt.currentTarget.reset();
 }
 
