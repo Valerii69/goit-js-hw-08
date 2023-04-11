@@ -32,7 +32,7 @@ function galleryItemCreate(galleryItems) {
   
   gallery.insertAdjacentHTML("beforeend", items); // додаємо до HTML розмітки зображення
 
-  lightbox = new SimpleLightbox(".gallery a", {
+  new SimpleLightbox(".gallery a", {
 
     captionsData: "alt",
     animationSpeed: 250,
