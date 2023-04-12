@@ -18,14 +18,13 @@ if (formValues) {
 
 function onSubmit(evt) {
   evt.preventDefault();
-  console.log(localStorage.removeItem(feedBackFormState));
+  console.log('Form Data:', formValues);
 
-  if (email.value === '' || message.value === '') {
-    return;
-  }
-  // console.log(formValues);
+  localStorage.removeItem(feedBackFormState);
+  email.value = '';
+  message.value = '';
   evt.currentTarget.reset();
-}
+  }
 
 form.addEventListener('input', saveInLocalStorage);
 form.addEventListener('submit', onSubmit);
