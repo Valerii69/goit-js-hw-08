@@ -18,6 +18,9 @@ if (formValues) {
 
 function onSubmit(evt) {
   evt.preventDefault();
+  if (email.value === '' || message.value === '') {
+    return;
+  }
   console.log('Form Data:', formValues);
 
   localStorage.removeItem(feedBackFormState);
